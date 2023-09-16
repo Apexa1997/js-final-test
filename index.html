@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .add{
+        font-weight: normal;
+    }
+</style>
+
+<body>
+    <!-- Question First -->
+
+    <input type="text" id="input1" />
+    <button onclick="addToList()">Add To List</button>
+    <button id="changeBold" class="add">ToggleBold</button>
+    <ul id="result"><span></span></ul>
+
+    <script>
+
+        const addToList = () => {
+            let inputValue = document.getElementById("input1").value;
+            let createList = (`<li> ${inputValue} </li>`);
+            document.getElementById("result").innerHTML += createList;
+            document.getElementById("input1").value = "";
+        }
+
+        let liItem = document.getElementById("result");
+        let changeBold = document.getElementById("changeBold");
+
+        if (liItem !== "bold") {
+            changeBold.addEventListener('click', function (event) {
+                liItem.style.fontWeight = "bold";
+            });
+        }
+        else {
+            
+            liItem.style.fontWeight = "normal";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Thoory Question -->
+
+Answer = 1
+
+when we gives one item in multiple key pair values that time we used object.
+ex:- const bag =
+{
+color : black,
+size : medium,
+}
+<br><br>
+
+Answer = 2
+
+Runs block of code multiple times or certain number of times when we used loops.
+for loop, for in loop, for of loop
+<br><br>
+
+Answer = 3
+
+We used code Branching when we used to perfomed based on different condition.When two or more cases given that time only
+one case can be exacute.if..else, switch ,ternory opartor.
+<br><br>
+
+Answer = 4
+
+Array.forEach() return undefined or nothing.
+ex:-
+const arr = [1,2,3,4,5]
+arr.forEach((element) => {
+console.log(element)
+})
+<br><br>
+
+Answer = 5
+
+Array.find() return first element in providing array.thats satisfy the providing testing function. Otherwise its return
+undefined.
